@@ -19,7 +19,8 @@ function App() {
 
   return (
     <>
-    <h1>EXPENSE TRACKER</h1>
+    <img src="/home/sana/my-projects/react+vite projects/expense-tracker/expense-tracker-react-app/src/finances-pie-chart-svgrepo-com.svg" alt="" />
+    <h3>EXPENSE TRACKER</h3>
       <div className="mb-3">
         <ExpenseFilter onSelectCategory={category=>setSelectedCategory(category)}/>
       </div>
