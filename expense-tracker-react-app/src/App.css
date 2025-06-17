@@ -37,6 +37,23 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
+
+
+.cata-selection{
+  display: flex;
+  flex-direction: row;
+}
+.bi-filter{
+  background-color: aqua;
+  font-size: 25px;
+}
+.btn-outline-danger{
+  height: 25px;
+  width: 65px;
+  text-align: center;
+  padding: 0px;
+}
+
+table{
+  margin-top: 30px;
 }
