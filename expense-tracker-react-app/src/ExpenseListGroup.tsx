@@ -14,7 +14,7 @@ interface props{
 function ExpenseListGroup({expenses,onDelete}:props) {
     if (expenses.length==0) return null
   return (
-    <table className="table table-success table-striped">
+    <table className="table table-bordered border-info">
         <thead>
             <tr>
             <th scope="col">Description</th>
