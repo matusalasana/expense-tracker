@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form"
 import categories from "./Catagories"
 import {z} from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
+import './index.css'
 
     interface props{
         onSubmit:(data:FormData)=>void

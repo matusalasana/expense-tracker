@@ -67,3 +67,9 @@ button:focus-visible {
   }
 }
 
+img{
+  width:100px;
+  min-width: 60px;
+  color: red;
+}
+

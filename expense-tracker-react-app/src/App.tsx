@@ -3,6 +3,7 @@ import ExpenseForm from './ExpenseForm';
 import { useState } from 'react';
 import ExpenseListGroup from './ExpenseListGroup';
 import ExpenseFilter from './ExpenseFilter';
+import logo from './assets/miscellaneous-expenses-svgrepo-com.svg'
 
 
 function App() {
@@ -17,12 +18,18 @@ function App() {
 
   return (
     <>
-    <img src="/home/sana/my-projects/react+vite projects/expense-tracker/expense-tracker-react-app/src/expensify-svgrepo-com.svg" className="img-fluid" alt="..."></img>
+
+    <img src={logo} alt="expense tracker logo" />
+
     <h3>EXPENSE TRACKER</h3>
-    <div className="mb-3"><ExpenseForm onSubmit={(expense)=>setExpenses([...expenses,{...expense,id:expenses.length}])}/></div>
-      <div className="mb-3">
+
+    <div className="mb-3">
+      <ExpenseForm onSubmit={(expense)=>setExpenses([...expenses,{...expense,id:expenses.length}])}/>
+    </div>
+    
+    <div className="mb-3">
         <ExpenseFilter onSelectCategory={category=>setSelectedCategory(category)}/>
-      </div>
+    </div>
       
     <ExpenseListGroup expenses={visibleExpenses} onDelete={(id)=>setExpenses(expenses.filter((e)=>e.id !== id,0))}/>
     

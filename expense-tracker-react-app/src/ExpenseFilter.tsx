@@ -8,7 +8,7 @@ function ExpenseFilter({onSelectCategory}:props) {
   return (
     <div>
         <select aria-label="Default select example" onChange={(event)=>onSelectCategory(event.target.value)} className="form-select">
-            <option value="">All Catagories</option>
+            <option value="">All Expenses</option>
             {categories.map(category=><option key={category} value={category}>{category}</option>)}
         </select>
     </div>
