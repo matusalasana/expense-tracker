@@ -12,7 +12,6 @@ interface props{
 }
 
 function ExpenseListGroup({expenses,onDelete}:props) {
-    if (expenses.length==0) return null
   return (
     <table className="table table-bordered border-info">
         <thead>
@@ -24,13 +23,16 @@ function ExpenseListGroup({expenses,onDelete}:props) {
             </tr>
         </thead>
         <tbody>
-            {expenses.map(expense=>
-            <tr key={expense.id}>
-            <td scope="col">{expense.title}</td>
-            <td scope="col">{expense.amount}</td>
-            <td scope="col">{expense.category}</td>
-            <td scope="col"><button onClick={()=>onDelete(expense.id)} className="btn btn-outline-danger" type="button">Delete</button></td>
-            </tr>)}
+            {expenses.map(expense=> 
+                ( expense.title==""
+                    ?null
+                    :<tr key={expense.id}>
+                    <td scope="col">{expense.title}</td>
+                    <td scope="col">{expense.amount}</td>
+                    <td scope="col">{expense.category}</td>
+                    <td scope="col"><button onClick={()=>onDelete(expense.id)} className="btn btn-outline-danger" type="button">Delete</button></td>
+                    </tr>))}
+
         </tbody>
         <tfoot>
             <tr>
